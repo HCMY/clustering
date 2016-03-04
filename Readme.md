@@ -11,7 +11,7 @@ Its not (yet) uploaded to PyPI, so installation has to be done from source:
 	pip install -e .
 	
 ###### Usage:
-
+	from cosine_means import CosineMeans
 	from sklearn.datasets import make_classification
 	X, _ = make_classification(n_samples=100, n_features=2, n_informative=1, n_redundant=0, n_clusters_per_class=1)
 
