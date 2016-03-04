@@ -2,6 +2,8 @@
 
 Because `sklearns` `KMeans` implementation doesn't allow different distance metrics.
 
+Kind of an intermediary between standard `KMeans` and `SpectralClustering` with `affinity='cosine'` (`SpectralClustering` first performs a low-dimensional embedding of the affinity matrix and clusters it, whereas `CosineMeans` works directly on the data matrix).
+
 ###### Installation
 
 Its not (yet) uploaded to PyPI, so installation has to be done from source:

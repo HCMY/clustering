@@ -46,8 +46,8 @@ class CosineMeans(KMeans):
 				if (sparse.issparse(X)):
 					centroids[yi] = np.asarray(X[row_idx].multiply(1/len(row_idx)).sum(axis=0))
 				else:
-					centroids[yi] = np.multiply(X[row_idx], 1/len(row_idx)).sum(axis=0
-																				)
+					centroids[yi] = np.multiply(X[row_idx], 1/len(row_idx)).sum(axis=0)
+					
 			# Convergence check
 			if (np.all(np.abs(self.cluster_centers_-centroids) < self.tol)):
 				break
