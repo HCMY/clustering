@@ -47,7 +47,7 @@ class CosineMeans(KMeans):
 					centroids[yi] = np.asarray(X[row_idx].multiply(1/len(row_idx)).sum(axis=0))
 				else:
 					centroids[yi] = np.multiply(X[row_idx], 1/len(row_idx)).sum(axis=0)
-					
+
 			# Convergence check
 			if (np.all(np.abs(self.cluster_centers_-centroids) < self.tol)):
 				break
@@ -73,7 +73,7 @@ class CosineMeans(KMeans):
 		# Based on: https://en.wikipedia.org/wiki/K-means%2B%2B
 		Xp = type(X)(X, shape=X.shape, dtype=X.dtype, copy=True) if sparse.issparse(X) else np.copy(X)
 
-		idx = random_state.randint(X.shape[0], size=(1,))
+		idx = random_state.randint(X.shape[0], size=(1,), dtype=Xp.indptr.dtype)[0]
 
 		centroids = Xp[idx]
 		Xp = self.delete_row_csr(Xp, idx) if sparse.issparse(Xp) else np.delete(Xp, idx, axis=0)
