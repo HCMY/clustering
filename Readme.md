@@ -1,4 +1,4 @@
-#### Cosine-Means a.k.a. KMeans with cosine distance
+#### Cosine-Means a.k.a. Spherical KMeans or just KMeans with cosine distance
 
 Because `sklearns` `KMeans` implementation doesn't allow different distance metrics.
 
