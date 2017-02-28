@@ -23,9 +23,9 @@ setup(
 	# Versions should comply with PEP440.  For a discussion on single-sourcing
 	# the version across setup.py and the project code, see
 	# https://packaging.python.org/en/latest/single_source_version.html
-	version='0.1.0',
+	version='0.2.0',
 
-	description='KMeans with cosine distance (kind of hack)',
+	description='NLP clustering algorithms',
 	long_description=long_description,
 
 	# The project's main homepage.
@@ -78,6 +78,7 @@ setup(
 	# requirements files see:
 	# https://packaging.python.org/en/latest/requirements.html
 	install_requires=[
+		'networkx>=1.11',
 		'numpy>=1.9.0',
 		'scikit-learn>=0.17',
 		'scipy>=0.16.1'
