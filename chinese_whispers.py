@@ -42,7 +42,7 @@ class ChineseWhispers(object):
 		return self.predict(G)
 
 	def _labelling(self, G, N):
-		labels = np.zeros((len(N),))
+		labels = np.zeros((len(N),), dtype=np.uint32)
 		for idx, n in enumerate(G.nodes_iter()):
 			labels[idx] = G.node[n][self.group_attr]
 
