@@ -1,3 +1,4 @@
 *.pyc
 .idea/*
 cosine_means.egg-info/
+*.egg-info/
